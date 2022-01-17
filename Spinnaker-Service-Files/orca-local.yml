@@ -1,0 +1,21 @@
+sql:
+  enabled: true
+  connectionPool:
+    jdbcUrl: "jdbc:mysql://<MySQL-RDS-EntPointURL>:3306/orca?enabledTLSProtocols=TLSv1.2"
+    user: "orca_service"
+    password: "OpsMx2021"
+    connectionTimeout: 5000
+    maxLifetime: 30000
+    maxPoolSize: 50
+  migration:
+    jdbcUrl: "jdbc:mysql://<MySQL-RDS-EntPointURL>:3306/orca?enabledTLSProtocols=TLSv1.2"
+    user: "orca_migrate"
+    password: "OpsMx2021"
+executionRepository:
+  sql:
+    enabled: true
+  redis:
+    enabled: false
+monitor:
+  activeExecutions:
+    redis: false
