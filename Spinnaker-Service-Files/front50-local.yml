@@ -17,7 +17,7 @@ sql:
   enabled: true
   connectionPools:
     default:
-      jdbcUrl: jdbc:mysql://spin-db-wurm-instance-1-us-east-1c.cyjw4hmntwfy.us-east-1.rds.amazonaws.com:3306/front50?enabledTLSProtocols=TLSv1.2 
+      jdbcUrl: jdbc:mysql://<MySQL-RDS-EntPointURL>:3306/clouddriver?enabledTLSProtocols=TLSv1.2 
       maxLifetimeMs: 59990
       connectionTimeoutMs: 5000
       validationTimeoutMs: 5000
@@ -26,6 +26,6 @@ sql:
       user: front50_service
       password: OpsMx2021
   migration:
-    jdbcUrl: jdbc:mysql://spin-db-wurm-instance-1-us-east-1c.cyjw4hmntwfy.us-east-1.rds.amazonaws.com:3306/front50?enabledTLSProtocols=TLSv1.2 
+    jdbcUrl: jdbc:mysql://<MySQL-RDS-EntPointURL>:3306/clouddriver?enabledTLSProtocols=TLSv1.2 
     user: front50_migrate
     password: OpsMx2021
